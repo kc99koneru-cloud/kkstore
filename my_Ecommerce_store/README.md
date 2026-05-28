@@ -42,13 +42,13 @@ docker compose up -d --build
 Open:
 
 ```text
-http://localhost
+http://65.0.203.128:6000
 ```
 
 Health check:
 
 ```text
-http://localhost/health
+http://65.0.203.128:5000/health
 ```
 
 ## EC2 Deployment
@@ -72,7 +72,7 @@ Start the app:
 docker compose up -d --build
 ```
 
-Make sure the EC2 security group allows inbound HTTP on port `80`.
+Make sure the EC2 security group allows inbound TCP on ports `6000` for the frontend and `5000` for the backend.
 
 ## Services
 
